@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Angels Senior Care | Nursing Home in Klang, Selangor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#f6efe4; --paper:#f1f1ef; --ink:#1d2a22; --muted:#6b5a45;
+  --sage:#7a9e7e; --sage-d:#5f8564; --forest:#3d5646; --onforest:#f3ece0;
+  --line:#e2d6c2; --card:#f6efe4; --hero-a:rgba(30,45,36,.78); --hero-b:rgba(30,45,36,.55);
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --cream:#26302a; --paper:#1d2520; --ink:#f0ebe0; --muted:#c3b9a6;
+    --line:#3a463e; --card:#2a352e; --forest:#2f4538; --sage:#86ab8a; --sage-d:#9bbd9e;
+  }
+}
+:root[data-theme="dark"]{--cream:#26302a;--paper:#1d2520;--ink:#f0ebe0;--muted:#c3b9a6;--line:#3a463e;--card:#2a352e;--forest:#2f4538;--sage:#86ab8a;--sage-d:#9bbd9e}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.7 "Nunito",system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--cream);z-index:60}
+h1,h2,h3{font-family:"Lora",Georgia,serif;line-height:1.2;margin:0}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+:focus-visible{outline:3px solid var(--sage-d);outline-offset:3px}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--cream);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font:600 1.9rem "Lora",serif;text-decoration:none;display:flex;align-items:center;gap:8px;color:var(--ink)}
+.logo svg{width:30px;height:30px;color:var(--sage-d)}
+nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;align-items:center}
+nav a{text-decoration:none;font-size:.97rem;color:var(--muted);padding:4px 0}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--sage);color:#fff;font-weight:700;text-decoration:none;border:2px solid var(--sage);border-radius:999px;padding:12px 26px;cursor:pointer;font-family:inherit;font-size:1rem;transition:background .2s}
+.btn:hover{background:var(--sage-d);border-color:var(--sage-d)}
+.btn.ghost{background:transparent;border-color:rgba(255,255,255,.75)}
+.btn.ghost:hover{background:rgba(255,255,255,.14)}
+nav .btn{padding:9px 22px;color:#fff}
+.menu-btn{display:none;background:none;border:0;color:var(--ink);padding:8px;cursor:pointer}
+.menu-btn svg{width:28px;height:28px}
+
+/* hero */
+.hero{position:relative;color:#fff;text-align:center;padding:120px 0 130px;
+  background:linear-gradient(var(--hero-a),var(--hero-b)),
+  radial-gradient(circle at 20% 30%,#8fae8f 0,transparent 45%),radial-gradient(circle at 80% 70%,#c9a97a 0,transparent 50%),#4a6354}
+.hero p.tag{font-weight:600;letter-spacing:.08em;font-size:.9rem;margin:0 0 18px;opacity:.9}
+.hero h1{font-size:clamp(2.3rem,6vw,3.9rem);max-width:15ch;margin:0 auto 20px;font-weight:700}
+.hero p.lead{max-width:34rem;margin:0 auto 34px;font-size:1.2rem}
+.hero .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* sections */
+section{padding:88px 0}
+.head{text-align:center;max-width:40rem;margin:0 auto 52px}
+.head h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:14px}
+.head p{color:var(--muted);margin:0;font-size:1.1rem}
+.services{background:var(--cream)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.ph{aspect-ratio:3/2;display:grid;place-items:center;color:#fff;font:600 .85rem "Nunito",sans-serif;text-align:center;padding:12px;
+  background:linear-gradient(135deg,#8fae8f,#5f8564)}
+.ph.b{background:linear-gradient(135deg,#c9a97a,#9c7b52)}
+.ph.c{background:linear-gradient(135deg,#8aa0b5,#5d768f)}
+.card .in{padding:26px 26px 30px}
+.card h3{font-size:1.3rem;margin-bottom:10px}
+.card p{margin:0;color:var(--muted);font-size:1rem}
+
+/* facilities */
+.fac{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.fac div{border:1px solid var(--line);border-radius:14px;padding:24px 20px;background:var(--card)}
+.fac h3{font-size:1.1rem;margin-bottom:8px}
+.fac p{margin:0;color:var(--muted);font-size:.97rem}
+
+/* about */
+.about{background:var(--paper)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split .ph{aspect-ratio:1/1;border-radius:24px;box-shadow:0 20px 40px rgba(0,0,0,.14)}
+.about .kicker{color:var(--sage-d);font-weight:700;margin:0 0 8px}
+.about h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:18px}
+.about p{color:var(--muted)}
+blockquote{margin:26px 0;padding:4px 0 4px 20px;border-left:4px solid var(--sage);font-style:italic;color:var(--ink)}
+blockquote cite{display:block;font-style:normal;font-size:.95rem;color:var(--muted);margin-top:8px}
+.more{color:var(--sage-d);font-weight:700;text-decoration:none}
+
+/* cta + contact */
+.cta{background:var(--forest);color:var(--onforest);text-align:center}
+.cta h2{font-size:clamp(1.8rem,4vw,2.5rem);max-width:20ch;margin:0 auto 16px}
+.cta p{max-width:34rem;margin:0 auto 30px;font-size:1.1rem}
+.cta .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta .btn.ghost{border-color:rgba(243,236,224,.6)}
+.contact{background:var(--cream)}
+form{max-width:620px;margin:0 auto;display:grid;gap:18px}
+label{font-weight:700;font-size:.97rem;display:grid;gap:6px}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:12px;padding:13px 16px;width:100%}
+textarea{min-height:120px;resize:vertical}
+form .btn{justify-self:start}
+.note{color:var(--muted);font-size:.93rem;margin:0}
+
+/* footer */
+footer{background:var(--forest);color:var(--onforest);padding:64px 0 0;border-top:1px solid rgba(243,236,224,.18)}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
+footer h4{font:600 1rem "Lora",serif;margin:0 0 14px;opacity:.85}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer a{text-decoration:none;opacity:.9}
+footer a:hover{opacity:1;text-decoration:underline}
+footer .logo{color:var(--onforest);margin-bottom:12px}
+footer p{margin:0;opacity:.9}
+.copy{margin-top:48px;border-top:1px solid rgba(243,236,224,.18);padding:20px 0 28px;text-align:center;font-size:.9rem;opacity:.8}
+
+@media (max-width:900px){
+  .grid,.fac{grid-template-columns:1fr 1fr}
+  .split,.fgrid{grid-template-columns:1fr}
+  .split{gap:36px}
+}
+@media (max-width:760px){
+  .menu-btn{display:block}
+  nav ul{display:none;position:absolute;left:0;right:0;top:100%;background:var(--cream);flex-direction:column;align-items:flex-start;gap:6px;padding:16px 24px 24px;border-bottom:1px solid var(--line)}
+  nav ul.open{display:flex}
+  nav a{padding:10px 0;font-size:1.05rem}
+  .grid,.fac{grid-template-columns:1fr}
+  section{padding:64px 0}
+  .hero{padding:84px 0 92px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#home" aria-label="Angels Senior Care, home">
+      <!-- Replace this simple wing icon with your own logo image if you have one -->
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 22c2-9 8-15 18-17-3 4-4 7-4 10 3-2 6-3 10-3-4 6-10 9-24 10z"/><path d="M12 22c3-3 7-5 12-6"/></svg>
+      Angels
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav>
+      <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#facilities">Facilities</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn" href="#contact">Enquire Now</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO: to use a real photo, replace the background in .hero CSS with url('your-photo.jpg') -->
+  <section class="hero" id="home">
+    <div class="wrap">
+      <p class="tag">24-hour nursing care in Klang, Selangor</p>
+      <h1>A Caring Home for Your Loved Ones</h1>
+      <p class="lead">Round-the-clock nursing care, compassionate support, and a warm, peaceful environment right here in Klang.</p>
+      <div class="btns">
+        <a class="btn" href="#contact">Enquire Now</a>
+        <a class="btn ghost" href="#contact">Schedule a Visit</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="head">
+        <h2>Comprehensive Care, Every Hour of the Day</h2>
+        <p>We provide everything your loved one needs to live with dignity, comfort, and peace of mind.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="ph">Photo: nurse with resident</div>
+          <div class="in"><h3>Round-the-Clock Nursing</h3><p>Our qualified nurses are on duty 24 hours a day, 7 days a week, so your loved one always has professional care close at hand.</p></div>
+        </article>
+        <article class="card">
+          <div class="ph b">Photo: caregiver helping resident</div>
+          <div class="in"><h3>Daily Living Assistance</h3><p>From bathing and dressing to meals and mobility, our caregivers help with every part of daily life with warmth and respect.</p></div>
+        </article>
+        <article class="card">
+          <div class="ph c">Photo: nurse holding resident’s hands</div>
+          <div class="in"><h3>Medical Supervision</h3><p>Regular health monitoring, medication management, and coordination with doctors make sure your loved one’s medical needs are always met.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="facilities">
+    <div class="wrap">
+      <div class="head">
+        <h2>A Home Designed for Comfort</h2>
+        <p>Safe, clean, and welcoming spaces where residents can rest, eat, and enjoy company.</p>
+      </div>
+      <!-- Edit, add, or remove facilities below -->
+      <div class="fac">
+        <div><h3>Comfortable Rooms</h3><p>Clean, airy rooms with nurse-call buttons and safe bathrooms.</p></div>
+        <div><h3>Nutritious Meals</h3><p>Home-style meals, with soft and special diets prepared on request.</p></div>
+        <div><h3>Garden and Common Areas</h3><p>Quiet spaces to sit outdoors, read, and meet visitors.</p></div>
+        <div><h3>Activities and Therapy</h3><p>Light exercise, games, and social activities each day.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap split">
+      <div class="ph">Photo: residents and family</div>
+      <div>
+        <p class="kicker">Why Angels</p>
+        <h2>More Than a Care Facility: A Second Home</h2>
+        <p>At Angels, we believe every senior deserves to feel cherished, not just cared for. Our team of dedicated nurses and caregivers treat each resident like family, with patience, kindness, and genuine love.</p>
+        <p>Located in the heart of Klang, our warm and homely facility is designed to feel like a true home, with garden spaces, comfortable common areas, and a community that cares.</p>
+        <!-- Replace with a real family testimonial (with their permission) -->
+        <blockquote>“Knowing Mum is in safe, loving hands gives our whole family peace of mind. Angels truly feels like home.”<cite>Sample name, daughter of a resident</cite></blockquote>
+        <a class="more" href="#contact">Talk to our team</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <h2>Ready to Give Your Loved One the Care They Deserve?</h2>
+      <p>Our team is here to answer your questions and guide you through every step. Come visit us, we’d love to welcome you.</p>
+      <div class="btns">
+        <a class="btn" href="#contact">Schedule a Visit</a>
+        <a class="btn ghost" href="tel:+60123456789">Call Us Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="head">
+        <h2>Enquire or Book a Visit</h2>
+        <p>Tell us a little about your loved one and we’ll get back to you. Visits are welcome by appointment.</p>
+      </div>
+      <form id="enquiry">
+        <label>Your name<input name="name" required autocomplete="name"></label>
+        <label>Phone number<input name="phone" type="tel" required autocomplete="tel"></label>
+        <label>I would like to
+          <select name="type">
+            <option>Schedule a visit</option>
+            <option>Ask about care services</option>
+            <option>Ask about fees and availability</option>
+          </select>
+        </label>
+        <label>Message (optional)<textarea name="msg"></textarea></label>
+        <button class="btn" type="submit">Send on WhatsApp</button>
+        <p class="note">This opens WhatsApp with your message ready to send to our team.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="logo" href="#home">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 22c2-9 8-15 18-17-3 4-4 7-4 10 3-2 6-3 10-3-4 6-10 9-24 10z"/><path d="M12 22c3-3 7-5 12-6"/></svg>
+          Angels
+        </a>
+        <p>A warm, caring home for your loved ones in Klang, where compassion meets professional nursing care, around the clock.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#facilities">Facilities</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <ul>
+          <!-- Replace with your real details -->
+          <li>Klang, Selangor, Malaysia</li>
+          <li><a href="tel:+60123456789">+60 12-345 6789</a></li>
+          <li><a href="mailto:care@angels.com.my">care@angels.com.my</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© 2026 Angels Senior Care, Klang. Made with care for every family.</div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  var btn = document.getElementById('menuBtn'), menu = document.getElementById('menu');
+  btn.addEventListener('click', function () {
+    var open = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  menu.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') { menu.classList.remove('open'); btn.setAttribute('aria-expanded', false); }
+  });
+
+  // Enquiry form -> WhatsApp. Change this number: country code, no + or spaces.
+  var WHATSAPP_NUMBER = '60123456789';
+  document.getElementById('enquiry').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = new FormData(e.target);
+    var text = 'Hello Angels, I would like to: ' + f.get('type') +
+      '.\nName: ' + f.get('name') + '\nPhone: ' + f.get('phone') +
+      (f.get('msg') ? '\nMessage: ' + f.get('msg') : '');
+    window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text), '_blank');
+  });
+</script>
+</body>
+</html>
