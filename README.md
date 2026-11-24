@@ -32,8 +32,9 @@ Item	Value
 Domain	sebasu.space (registered at GoDaddy)
 Site address	angels.sebasu.space
 S3 bucket	angels-sebasu-site (region: ap-southeast-1)
-CloudFront distribution ID	________________
-CloudFront domain	d__________.cloudfront.net
+CloudFront distribution ID	ESB8Q94XE8J24
+CloudFront domain	dhu0ykb0lgkki.cloudfront.net
+Invalidation ID       	ICGD85D3AD5QX72V4YEKR2QPFF
 ACM certificate ARN (us-east-1)	________________
 Setup steps (what was done)
 
